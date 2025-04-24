@@ -15,3 +15,9 @@ Sobre este primer código debo de cir que comprendí algo muy importante, y es l
 Una amiga  me mostró como hizo su trabajo con definiciones, quiero hacer una segunda versión del código con definiciones y una nueva filosofia más minimalista para ver cómo me queda!
 
 
+
+# Ejercicios de clase con el TL Sebastián 
+
+
+
+ <a href="https://github.com/Felipehincacode/Python_modulo_1/blob/main/ejercicios_1.py"> Puedes ver el ejercicio 1 aquí</a> 
