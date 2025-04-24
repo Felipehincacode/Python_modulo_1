@@ -5,9 +5,8 @@ Aquí encontrarás mis **apuntes técnicos**, **ejercicios**, y **conceptos clav
 
 
 
-<h1>Comentarios sobre el primer código</h1>
-<h2> Entrenamiento semana uno </h2>
-<h3>Calculadora de inventarios</h3>
+<h1 style="text-align: center;">Comentarios sobre el código de entrenamiento en moodle</h1>
+<h3 style="text-align: center;">Calculadora de inventarios</h3>
 
  <a href="https://github.com/Felipehincacode/Ejerciciosdeclaseriwi/blob/main/inventario_calculadora.py"> Puedes ver el código aquí</a> 
 
