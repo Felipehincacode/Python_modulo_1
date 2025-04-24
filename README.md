@@ -21,3 +21,4 @@ Una amiga  me mostró como hizo su trabajo con definiciones, quiero hacer una se
 
 
  <a href="https://github.com/Felipehincacode/Python_modulo_1/blob/main/ejercicios_1.py"> Puedes ver el ejercicio 1 aquí</a> 
+ <a href="https://github.com/Felipehincacode/Python_modulo_1/blob/main/ejercicios_2.py"> Puedes ver el ejercicio 1 aquí</a> 
