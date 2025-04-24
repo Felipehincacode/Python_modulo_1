@@ -1,2 +1,4 @@
-# Python_modulo_1
-Este es un espacio en el cual iré subiendo mis trabajos de python en Riwi, aquí documentaré lo que aprendo, tomaré notas y pondré mis códigos de python
+# 🐍 Python – Módulo 1: Fundamentos de Programación
+
+Este documento forma parte de mi formación en **Riwi**, un centro de entrenamiento en software.  
+Aquí encontrarás mis **apuntes técnicos**, **ejercicios**, y **conceptos clave** del Módulo 1 de **Python básico**.
