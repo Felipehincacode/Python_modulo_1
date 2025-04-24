@@ -1,2 +1,2 @@
 # Python_modulo_1
-Este repositorio está hecho con el fin de dar consigna de los aprendizajes y actividades de Riwi
+Este es un espacio en el cual iré subiendo mis trabajos de python en Riwi, aquí documentaré lo que aprendo, tomaré notas y pondré mis códigos de python
