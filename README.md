@@ -15,10 +15,16 @@ Sobre este primer código debo de cir que comprendí algo muy importante, y es l
 Una amiga  me mostró como hizo su trabajo con definiciones, quiero hacer una segunda versión del código con definiciones y una nueva filosofia más minimalista para ver cómo me queda!
 
 
-
+# Semana 1 introducción a pyhton
 # Ejercicios de clase con el TL Sebastián 
 
 
 
  <a href="https://github.com/Felipehincacode/Python_modulo_1/blob/main/ejercicios_1.py"> Puedes ver el ejercicio 1  aquí</a> 
  <a href="https://github.com/Felipehincacode/Python_modulo_1/blob/main/ejercicios_2.py"> Puedes ver el ejercicio 2 aquí</a> 
+
+
+# Semana 2 Bucles y condicionales
+
+<a href="https://github.com/Felipehincacode/Python_modulo_1/blob/main/semana_2/Bucles_potenciado_IA"> Hice una versión potenciada con Gemini, en ella  comenté el código y con definiciones hice un switch case </a> 
+<a href="https://github.com/Felipehincacode/Python_modulo_1/blob/main/semana_2/bucles.py"> Puedes ver los ejercicios aquí </a> 
