@@ -1,0 +1,153 @@
+import time
+import random
+
+# --- Funciones de Ejercicios ---
+
+def ejercicio_clasificador_numeros():
+    """Pide un número entero y clasifica si es positivo, negativo o cero."""
+    print("\n--- 🚀 Ejercicio 1: Clasificador de números 🚀 ---")
+    try:
+        numero = int(input("Ingrese un número entero: "))
+        if numero > 0:
+            print(f"El número {numero} es positivo. 👍")
+        elif numero < 0:
+            print(f"El número {numero} es negativo. 👎")
+        else:
+            print(f"El número {numero} es cero.  neutral") # O algún emoji neutral
+    except ValueError:
+        print("Error: Por favor, ingrese solo números enteros. 🚫")
+    print("--- ✨ Fin Ejercicio 1 ✨ ---")
+    time.sleep(1)
+
+def ejercicio_aprobado_reprobado():
+    """Pide una calificación y determina si está aprobado o reprobado."""
+    print("\n--- 📚 Ejercicio 2: Aprobado o reprobado 📚 ---")
+    try:
+        nota = float(input("Ingrese la calificación del estudiante (0 a 100): "))
+        if nota < 0 or nota > 100:
+            print("Error: Por favor, ingrese un número dentro del rango especificado (0 a 100). 範圍") # Emoji de rango
+        elif nota < 60:
+             print("Usted es un vago, reprobó la materia. 😞")
+        else:
+             print("Máquina, ganaste la materia. 😎")
+    except ValueError:
+        print("Error: Por favor, ingrese un número válido para la calificación. 🔢")
+    print("--- ✨ Fin Ejercicio 2 ✨ ---")
+    time.sleep(1)
+
+def ejercicio_tabla_multiplicar():
+    """Muestra la tabla de multiplicar de un número del 1 al 10."""
+    print("\n--- ✖️ Ejercicio 3: Tabla de multiplicar ✖️ ---")
+    try:
+        num = int(input("Ingrese un número para ver su tabla de multiplicar: "))
+        print(f"\nTabla de multiplicar del {num}:")
+        for puesto in range(1, 11):
+            print(f"{num} X {puesto} = {num * puesto}")
+    except ValueError:
+        print("Error: Por favor, ingrese solo números enteros. 🧱") # Emoji de bloque o número
+    print("--- ✨ Fin Ejercicio 3 ✨ ---")
+    time.sleep(1)
+
+def ejercicio_contador_regresivo():
+    """Realiza una cuenta regresiva desde un número dado hasta 0."""
+    print("\n--- ⏱️ Ejercicio 4: Contador regresivo ⏱️ ---")
+    try:
+        num = int(input("Ingrese un número entero positivo para la cuenta regresiva: "))
+        if num < 0:
+            print("Error: Por favor, ingrese un número positivo. 🚫")
+            return
+        print("\nIniciando cuenta regresiva...")
+        while num > 0:
+            time.sleep(0.5)
+            print(f"Su computador explotará en {num} segundos... 💣")
+            num -= 1
+        print("¡BOOM! 💥") # Mensaje final
+    except ValueError:
+        print("Error: Por favor, ingrese solo números enteros. 🔢")
+    print("--- ✨ Fin Ejercicio 4 ✨ ---")
+    time.sleep(1)
+
+def ejercicio_adivina_numero():
+    """Juego de adivinar un número aleatorio entre 1 y 10 en 3 intentos."""
+    print("\n--- 🎲 Ejercicio 5: Adivina el número 🎲 ---")
+    intentos = 3
+    numero_aleatorio = random.randint(1, 10)
+    print("¡Bienvenido al juego de adivinar el número! 🎮")
+    print("He elegido un número entre 1 y 10. Tienes 3 intentos.")
+
+    while intentos > 0:
+        try:
+            print(f"\nIntentos restantes: {intentos} ❤️") # Emoji de vida/intento
+            numero_usuario = int(input("Introduce tu número: "))
+            if numero_usuario < 1 or numero_usuario > 10:
+                print("Por favor, introduce un número entre 1 y 10. ➡️⬅️") # Emoji de flechas
+                continue
+
+            if numero_usuario == numero_aleatorio:
+                print("¡Felicidades! Adivinaste el número. 🎉🥳")
+                break
+            elif numero_usuario < numero_aleatorio:
+                print("El número es mayor. Intenta de nuevo. ⬆️")
+            else:
+                print("El número es menor. Intenta de nuevo. ⬇️")
+
+            intentos -= 1
+            if intentos > 0:
+                 time.sleep(1)
+
+        except ValueError:
+            print("Error: Por favor, introduce un número válido. 🤔")
+
+    if intentos == 0:
+        print(f"\nLo siento, has agotado tus intentos. El número era {numero_aleatorio}. 💔")
+    print("--- ✨ Fin Ejercicio 5 ✨ ---")
+    time.sleep(1)
+
+# --- Función del Menú ---
+
+def mostrar_menu():
+    """Muestra el menú de opciones y pide la elección del usuario."""
+    print("\n" + "═" * 40) # Usando caracteres dobles para el borde
+    print("         📖 Menú de Ejercicios 📖")
+    print("═" * 40)
+    print("1. ➕➖ Ejercicio 1: Clasificador de números")
+    print("2. ✅❌ Ejercicio 2: Aprobado o reprobado")
+    print("3. ✖️🔢 Ejercicio 3: Tabla de multiplicar")
+    print("4. ⏳📉 Ejercicio 4: Contador regresivo")
+    print("5. 🤔🎲 Ejercicio 5: Adivina el número")
+    print("6. 🚪 Salir")
+    print("═" * 40)
+    eleccion = input("Introduce el número del ejercicio que deseas ejecutar: ")
+    return eleccion
+
+# --- Mapa de Ejercicios (Simulación de Switch-Case) ---
+
+mapa_ejercicios = {
+    "1": ejercicio_clasificador_numeros,
+    "2": ejercicio_aprobado_reprobado,
+    "3": ejercicio_tabla_multiplicar,
+    "4": ejercicio_contador_regresivo,
+    "5": ejercicio_adivina_numero
+}
+
+# --- Lógica Principal del Programa ---
+
+if __name__ == "__main__":
+    print("🌟 ¡Bienvenido al centro de ejercicios de Python! 🌟")
+    ejecutando = True
+
+    while ejecutando:
+        opcion_elegida = mostrar_menu()
+
+        funcion_a_ejecutar = mapa_ejercicios.get(opcion_elegida)
+
+        if funcion_a_ejecutar:
+            funcion_a_ejecutar()
+        elif opcion_elegida == "6":
+            print("\n👋 Saliendo del programa. ¡Adiós, Coder! 👋")
+            ejecutando = False
+        else:
+            print("\n🚫 Opción no válida. Por favor, introduce un número del 1 al 6. 🧐")
+            time.sleep(1)
+
+    print("✅ Programa finalizado. ✅")
