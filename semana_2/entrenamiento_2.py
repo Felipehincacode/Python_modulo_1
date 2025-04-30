@@ -1,4 +1,4 @@
-
+import time
 
 '''1. Determinar el estado de aprobación:
 a. Solicitar al usuario ingresar una calificación numérica (de 0 a 100).
@@ -51,22 +51,33 @@ def promedio():
     
     while True:
         
-        Entrada_usuario = input("Por favor ingrese una nota")
+        Entrada_usuario = input("Por favor ingrese una nota: ")
 
         if Entrada_usuario.lower() == 'fin':
             
             print("¡Listo! Has terminado de ingresar notas.")
+            time.sleep(1) 
             break
+        
         try: 
             nota = float(Entrada_usuario)
+            print("Guardando su nota, por favor espere")
+            time.sleep(1)
+
+            print(f'Genial la nota: {nota} ha sido guardada exitosamente')
          
 
             lista_notas.append(nota)
 
         except ValueError: print("Uy te equivocaste, ingresa un número")
 
-    
+    suma_notas = sum(lista_notas)
+    cantidad = len(lista_notas)
 
+    resultado = suma_notas/cantidad
 
+    print(f"Usted ingresó {cantidad} notas.  El promedio de estas notas  es:{resultado}")
+    time.sleep(1)
+    print(f"El promedio de estas notas  es:{resultado}")
 
 print(promedio())
