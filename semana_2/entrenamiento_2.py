@@ -47,7 +47,7 @@ def promedio():
     lista_notas = []
    
     print("Bienvenido a la calculadora de promedios")
-    print("Ingrese las notas que quieras, para terminar de agragar nostas escriba fin o presione entere")
+    print("Ingrese las notas que quieras, para terminar de agregar nostas escriba fin ")
     
     while True:
         
@@ -71,13 +71,92 @@ def promedio():
 
         except ValueError: print("Uy te equivocaste, ingresa un número")
 
-    suma_notas = sum(lista_notas)
-    cantidad = len(lista_notas)
+    
 
-    resultado = suma_notas/cantidad
+    resultado = sum(lista_notas)/len(lista_notas)
 
-    print(f"Usted ingresó {cantidad} notas.  El promedio de estas notas  es:{resultado}")
+    print(f"Usted ingresó {len(lista_notas)} notas.  El promedio de estas notas  es:{resultado}")
     time.sleep(1)
     print(f"El promedio de estas notas  es:{resultado}")
 
-print(promedio())
+
+
+def notas_superior():
+         
+    lista_notas = []
+    contador_positivo = 0
+    contador_negativo = 0
+    contador_igual = 0
+   
+    print("Bienvenido al contador de notas superiores")
+    print("Ingrese las notas que quieras, el sistema contará que notas son \nmayores para terminar de agregar nostas escriba fin o presione enter")
+    
+    while True:
+        
+        Entrada_usuario = input("Por favor ingrese una nota: ")
+
+        if Entrada_usuario.lower() == 'fin':
+            
+            print("¡Listo! Has terminado de ingresar notas.")
+            time.sleep(1) 
+            break
+        
+        try: 
+            nota = float(Entrada_usuario)
+            print("Guardando su nota, por favor espere")
+            time.sleep(1)
+
+            print(f'Genial la nota: {nota} ha sido guardada exitosamente')
+         
+
+            lista_notas.append(nota)
+
+        except ValueError: print("Uy te equivocaste, ingresa un número")
+
+    while True:
+        
+        try:
+            Nota_comparar = float(input("Ahora ingresa una nota que quieras comparar con las demás el sistema te dirá, cuantas notas mayores hay, cuantas son menores y cuantas iguales"))
+            print(f"Perfecto, ahora el sistema determinará cuantas notas son mayores")
+            time.sleep(1)
+            break
+        except  ValueError:print("Uy te equivocaste, ingresa un número")
+        
+    for puesto in lista_notas:
+
+        if Nota_comparar< puesto:
+                  contador_positivo += 1
+        elif Nota_comparar == puesto:
+                contador_igual += 1
+        else:
+                 contador_negativo += 1
+
+    print(f"En comparación a la nota que ingresaste hay: {contador_positivo} notas mayores y {contador_negativo} notas menores y {contador_igual} son iguales")
+
+
+
+def switcher():
+       
+     print("Bienvenido a tu Notica tu aliado en la u")
+     print("por favor seleccione una opción según lo que desee de hacer")
+     print("Digite el número uno para: ver si ganó o perdió")
+     print("Digite el número dos para calcular su promedio")
+     print("Digite el número tres para ver que notas ")
+     print("Digite el número cuatro para salir ver que notas ")
+
+
+
+def programa():
+    eleccion = input("ingrese un número segun la opcion que desee")   
+    while True:
+            if eleccion == 1:
+                    verificacion()
+            elif eleccion == 2:
+                    promedio()
+            elif eleccion == 3:
+                    notas_superior()
+            else:
+                break
+
+    switcher()
+    programa()
