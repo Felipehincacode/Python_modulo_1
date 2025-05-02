@@ -143,20 +143,23 @@ def switcher():
      print("Digite el número dos para calcular su promedio")
      print("Digite el número tres para ver que notas ")
      print("Digite el número cuatro para salir ver que notas ")
+     eleccion = int(input("ingrese un número segun la opcion que desee"))   
+     return eleccion
 
 
 
-def programa():
-    eleccion = input("ingrese un número segun la opcion que desee")   
-    while True:
-            if eleccion == 1:
-                    verificacion()
-            elif eleccion == 2:
-                    promedio()
-            elif eleccion == 3:
-                    notas_superior()
-            else:
-                break
 
-    switcher()
-    programa()
+while True:
+    eleccion = switcher()
+    if eleccion == 1:
+        verificacion()
+    elif eleccion == 2:
+        promedio()
+    elif eleccion == 3:
+        notas_superior()
+    else:
+        break
+
+    
+    
+
