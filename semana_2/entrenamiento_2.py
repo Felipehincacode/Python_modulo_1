@@ -1,5 +1,5 @@
 import time
-import random # Se mantiene importado por si es necesario para futuros ejercicios
+
 
 # --- Descripción de los Ejercicios ---
 # Este script contiene funciones en Python para realizar operaciones básicas
