@@ -132,19 +132,20 @@ def delete_item_outstock():
     time.sleep(1)
     ask_for_create()
 
+
+
 def price_of_all_inventary():
     item_inventory = shop["inventory"]
-    for i in item_inventory:
-       for j in i:
-        subtotal = i["item_price"]*i["item_amount"]
-        subtotal2 = []
-        subtotal2.append(subtotal)
+    if not item_inventory:
+        print("El inventario está vacío. Valor total: 0")
+        return
+    total_value = sum(map(lambda item: item["item_price"] * item["item_amount"], item_inventory))
+    print(f"El valor total de todo el inventario es: {total_value}")
+    return
     
-    print(sum(subtotal2))    
-
         
 
-    return
+    
 def main():
     while True: 
         print("\n--- Hope's inventory sistem ---")
